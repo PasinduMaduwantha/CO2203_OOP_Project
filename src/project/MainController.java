@@ -1,4 +1,4 @@
-package sample;
+package project;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,6 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import javax.swing.*;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
