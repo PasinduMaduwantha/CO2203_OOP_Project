@@ -1,4 +1,4 @@
-package project;
+package project.frames;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -42,7 +42,7 @@ public class Categories {
         try {
             Stage stage = new Stage();
             stage.setTitle("New Category");
-            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("newCategory.fxml"))));
+            //stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("seens/NewCategory.fxml"))));
             stage.show();
         }
         catch (Exception e){
