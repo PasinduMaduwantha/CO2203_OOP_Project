@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 
-public class NewCategory extends Categories {
+public class NewCategory {
     @FXML public Label id;
     @FXML public Label name;
     @FXML public Label type;
@@ -15,4 +15,5 @@ public class NewCategory extends Categories {
         this.name.setText("Category Name"+Name);
         this.type.setText("Measuring Type"+Type);
     };
+
 }

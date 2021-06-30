@@ -6,24 +6,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import javax.swing.*;
 import java.io.IOException;
 
 public class Categories {
 
-    @FXML
-    private Label showId;
-    @FXML
-    private Label showname;
-    @FXML
-    private Label showtype;
-    @FXML
-    private TextField text_name;
-    @FXML
-    private TextField text_type;
-    @FXML
-    private TextField text_Id;
+    @FXML private Label showId;
+    @FXML private Label showname;
+    @FXML private Label showtype;
+    @FXML private TextField text_name;
+    @FXML private TextField text_type;
+    @FXML private TextField text_Id;
     private String category_Id="ID";    //ID set as default value
     private String category_Name="name";    //name set as default value
     private String measuring_type="type";    // consider about only two methods, default ano-of-items method
@@ -36,17 +29,13 @@ public class Categories {
         showId.setText(category_Id);
         showname.setText(category_Name);
         showtype.setText(measuring_type);
-
-        NewCategory newCategory= new NewCategory();
-//        newCategory.showItems(category_Id, category_Name, measuring_type);
         try {
-            Stage stage = new Stage();
-            stage.setTitle("New Category");
-            //stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("seens/NewCategory.fxml"))));
-            stage.show();
+            System.out.println("Category Item"+category_Id);
+            System.out.println("Category Name"+category_Name);
+            System.out.println("Measuring Type"+measuring_type);
         }
         catch (Exception e){
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Saved");
         }
 
     }
