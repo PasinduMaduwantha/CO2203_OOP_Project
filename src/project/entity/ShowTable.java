@@ -7,21 +7,7 @@ public class ShowTable {
     private float retailPrice;
     private float dis;
     private float promo;
-    private float final_Price;
-
-
-//    public ShowTable() {
-//    }
-//
-//    public ShowTable(String itemId, String itemName, float qty, float retailPrice, float dis, float promo, float finalPrice) {
-//        this.itemId = itemId;
-//        this.itemName = itemName;
-//        this.qty = qty;
-//        this.retailPrice = retailPrice;
-//        this.dis = dis;
-//        this.promo = promo;
-//        this.finalPrice = finalPrice;
-//    }
+    private float finalPrice;
 
     public String getItemId() {
         return itemId;
@@ -62,7 +48,6 @@ public class ShowTable {
     public void setDis(float dis) {
         this.dis = dis;
     }
-
     public float getPromo() {
         return promo;
     }
@@ -71,11 +56,11 @@ public class ShowTable {
         this.promo = promo;
     }
 
-    public float getFinal_Price() {
-        return final_Price;
+    public float getFinalPrice() {
+        return finalPrice;
     }
 
-    public void setFinal_Price(float finalPrice) {
-        this.final_Price = final_Price;
+    public void setFinalPrice(float finalPrice) {
+        this.finalPrice = finalPrice;
     }
 }
