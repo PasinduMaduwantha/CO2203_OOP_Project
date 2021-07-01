@@ -73,3 +73,4 @@
       <Label fx:id="showBrand" layoutX="288.0" layoutY="104.0" prefHeight="32.0" prefWidth="250.0" />
    </children>
 </AnchorPane>
+
