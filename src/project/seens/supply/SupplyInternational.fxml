@@ -26,7 +26,7 @@
                 <Font name="Comic Sans MS" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="43.0" layoutY="209.0" prefHeight="28.0" prefWidth="202.0" text="No of items in stock">
+        <Label layoutX="43.0" layoutY="209.0" prefHeight="28.0" prefWidth="202.0" text="Quantity">
             <font>
                 <Font name="Comic Sans MS" size="20.0" />
             </font>
@@ -53,8 +53,8 @@
         </Label>
         <TextField fx:id="supplyId" layoutX="316.0" layoutY="103.0" prefHeight="28.0" prefWidth="250.0" />
         <TextField fx:id="itemName" layoutX="316.0" layoutY="154.0" prefHeight="28.0" prefWidth="250.0" />
-        <TextField fx:id="shipId" layoutX="316.0" layoutY="266.0" prefHeight="28.0" prefWidth="250.0" />
-        <TextField fx:id="originCountryName" layoutX="316.0" layoutY="321.0" prefHeight="28.0" prefWidth="250.0" />
+        <TextField fx:id="vehicleId" layoutX="316.0" layoutY="266.0" prefHeight="28.0" prefWidth="250.0" />
+        <TextField fx:id="originName" layoutX="316.0" layoutY="321.0" prefHeight="28.0" prefWidth="250.0" />
         <Button fx:id="addSupply" layoutX="548.0" layoutY="523.0" mnemonicParsing="false" onAction="#addSupplyOnAction" text="Add">
             <font>
                 <Font name="Comic Sans MS" size="15.0" />
@@ -66,13 +66,13 @@
                 <Label fx:id="measure" layoutX="191.0" layoutY="21.0" prefHeight="25.0" prefWidth="74.0" />
             </children>
         </Pane>
-        <DatePicker fx:id="harbourArrivalDate" layoutX="315.0" layoutY="374.0" onAction="#pickharbourArrivalDate" prefHeight="26.0" prefWidth="250.0" />
+        <DatePicker fx:id="arrivalDate" layoutX="315.0" layoutY="374.0" onAction="#pickArrivalDate" prefHeight="26.0" prefWidth="250.0" />
         <Label layoutX="42.0" layoutY="426.0" prefHeight="28.0" prefWidth="242.0" text="Date of Arrival to Store">
             <font>
                 <Font name="Comic Sans MS" size="20.0" />
             </font>
         </Label>
-        <DatePicker fx:id="storeArrivalDate" layoutX="315.0" layoutY="427.0" onAction="#pickstoreArrivalDate" prefHeight="26.0" prefWidth="250.0" />
+        <DatePicker fx:id="departureDate" layoutX="315.0" layoutY="427.0" onAction="#departureOnAction" prefHeight="26.0" prefWidth="250.0" />
         <Label fx:id="statusShow" layoutX="316.0" layoutY="480.0" prefHeight="30.0" prefWidth="250.0">
             <padding>
                 <Insets bottom="4.0" left="7.0" right="7.0" top="5.0" />

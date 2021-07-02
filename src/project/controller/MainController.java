@@ -35,7 +35,7 @@ public class MainController implements Initializable {
         Stage stage=new Stage();
         stage.setTitle("New Category");
         try {
-            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/project/seens/Categories.fxml"))));
+            //stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/project/seens/Categories.fxml"))));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
@@ -47,6 +47,17 @@ public class MainController implements Initializable {
         stage.setTitle("Store");
         try {
             stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/project/seens/ShowItems.fxml"))));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        stage.show();
+    }
+
+    public void supplyOnAction(ActionEvent actionEvent) {
+        Stage stage=new Stage();
+        stage.setTitle("Supply");
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/project/seens/supply/SupplyMain.fxml"))));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }

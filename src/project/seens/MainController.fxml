@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.MainController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.MainController">
    <children>
       <Label layoutX="142.0" prefHeight="81.0" prefWidth="358.0" text="Invetory System Items" textFill="#383a4a">
          <font>
@@ -26,7 +27,7 @@
             <Font name="Comic Sans MS" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="383.0" layoutY="82.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="148.0" text="Supply">
+      <Button layoutX="383.0" layoutY="82.0" mnemonicParsing="false" onAction="#supplyOnAction" prefHeight="59.0" prefWidth="148.0" text="Supply">
          <font>
             <Font size="24.0" />
          </font>

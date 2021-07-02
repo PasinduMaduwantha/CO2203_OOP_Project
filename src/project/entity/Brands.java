@@ -19,7 +19,17 @@ public class Brands {
         return brand_Name;
     }
 
-    public boolean isLocal() {
-        return local;
+    public String isLocal() {
+        if (local)
+            return "Local";
+        else
+            return "International";
+    }
+
+    public void showBrand(){
+        System.out.println("Brand Id: "+brand_Id);
+        System.out.println("Brand Name: "+brand_Name);
+        System.out.println("Brand Origin: "+isLocal()+"\n");
     }
 }
+
