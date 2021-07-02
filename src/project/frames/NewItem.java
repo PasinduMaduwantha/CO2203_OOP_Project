@@ -16,7 +16,7 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
+//import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 import static java.lang.System.exit;
 
 public class NewItem implements Initializable {
