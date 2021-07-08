@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.MainController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.frames.staff.StaffController">
    <children>
       <Label layoutX="254.0" prefHeight="82.0" prefWidth="90.0" text="Staff" textFill="#383a4a">
          <font>
@@ -17,7 +17,7 @@
             <Font name="Comic Sans MS" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="newCategory" layoutX="368.0" layoutY="81.0" mnemonicParsing="false" onAction="#NewCategoryOnAction" prefHeight="59.0" prefWidth="193.0" text="Edit Staff" textFill="#b51111">
+      <Button fx:id="newCategory" layoutX="368.0" layoutY="81.0" mnemonicParsing="false" onAction="#editOnAction" prefHeight="59.0" prefWidth="193.0" text="Edit Staff" textFill="#b51111">
          <font>
             <Font name="Comic Sans MS" size="20.0" />
          </font>
