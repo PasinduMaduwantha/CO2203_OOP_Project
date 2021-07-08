@@ -10,18 +10,18 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import project.entity.Brands;
-
 import javax.swing.*;
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.*;
 import java.net.URL;
-import java.sql.*;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
-import static java.lang.System.exit;
 
 public class NewItem implements Initializable {
-    private float final_Price=0;
-    private String id="null", name="null", qty="null", rPrice="null", dis="null", promo ="null";
+    private float final_Price;
+    private String id, name, qty, rPrice, dis, promo, meth;
     @FXML private Label showBrand;
     @FXML private Label measure;
     @FXML private Label lblSelect;
@@ -62,13 +62,25 @@ public class NewItem implements Initializable {
             newCategory8.getCategory_Name(),
             newCategory9.getCategory_Name()
             , newCategory10.getCategory_Name());
-@Override
-public void initialize(URL location, ResourceBundle resources) {
-    selectItems.setItems(itemList);
-    comboBrand.setItems(brandList);
-}
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        selectItems.setItems(itemList);
+        comboBrand.setItems(brandList);
+    }
+
+    public NewItem(String id, String name, String qty,String meth, String rPrice, String dis, String promo, float final_Price) {
+        this.final_Price = final_Price;
+        this.id = id;
+        this.name = name;
+        this.qty = qty;
+        this.rPrice = rPrice;
+        this.dis = dis;
+        this.promo = promo;
+        this.meth = meth;
+    }
 
     public void saveItemOnAction(ActionEvent actionEvent) {
+
         id=itemId.getText();
         name=itemName.getText();
         qty=noOfItems.getText();
@@ -76,27 +88,52 @@ public void initialize(URL location, ResourceBundle resources) {
         dis=discounts.getText();
         promo=promotions.getText();
 
-//        float retPrice=Float.parseFloat(rPrice);
-//        float discount=Float.parseFloat(dis);
-//        float prm=Float.parseFloat(promo);
-//        final_Price= retPrice-(retPrice*discount/100)-prm;
         try {
-            System.out.println("Item Id: "+id);
-            System.out.println("Item Name: "+name);
-            System.out.println("Quantity: "+qty);
-            System.out.println("Retail Price: "+rPrice);
-            System.out.println("Promotions: "+dis);
-            System.out.println("Promotions: "+promo);
-            System.out.println("Final Price: "+final_Price);
-            JOptionPane.showMessageDialog(null,"Item Saved");
+            JOptionPane.showMessageDialog(null,"Saved Item"+
+                    "\nItem Id: " +id +
+                    "\nItem Name: "+name +
+                    "\nQuantity: "+qty+" "+ meth +
+                    "\nRetail Price: "+rPrice +
+                    "\nPromotions: "+dis +
+                    "\nPromotions: "+promo +
+                    "\nFinal Price: "+final_Price);
+
         }
         catch (Exception e){
             JOptionPane.showMessageDialog(null, e);
         }
+
+//        ArrayList<NewItem> new_Items =new ArrayList<>();
+        ArrayList<String> new_Items =new ArrayList<>();
+//        NewItem newItem=new NewItem( id, name, qty, meth, rPrice,dis, promo, final_Price);
+//        new_Items.add(newItem);
+        new_Items.add(0, id);
+        new_Items.add(1, name);
+        new_Items.add(2, qty);
+        new_Items.add(3, meth);
+        new_Items.add(4, rPrice);
+        new_Items.add(5,dis);
+        new_Items.add(6, promo);
+        new_Items.add(7, String.valueOf(final_Price));
+
+        XMLDecoder decoder=null;
+        XMLEncoder encoder=null;
+
+        try{
+            encoder=new XMLEncoder(new BufferedOutputStream(new FileOutputStream("new_Item.xml")));
+
+        }catch(
+                FileNotFoundException fileNotFound){
+            JOptionPane.showMessageDialog(null,"ERROR: While Creating or Opening the File New_item.xml");
+
+        }
+        encoder.writeObject(new_Items);
+        encoder.close();
     }
 
+
     public void clickOnAction(MouseEvent mouseEvent) {
-//        //final price Set automatically
+        //final price Set automatically
         rPrice=retailPrice.getText();
         dis=discounts.getText();
         promo=promotions.getText();
@@ -119,8 +156,10 @@ public void initialize(URL location, ResourceBundle resources) {
 
             if (str.equals("Produce(Fruits & Vegetables") || str.equals("Meat & Sea Foods" )|| str.equals("Grains")){
                 measure.setText("grams");
+                meth="grams";
             }else{
                 measure.setText("items");
+                meth="items";
             }
             lblSelect.setText(str);
         }
@@ -146,6 +185,85 @@ public void initialize(URL location, ResourceBundle resources) {
         }
     }
 }
+
+
+
+//
+//
+//public class StaffRepository {
+//
+//
+//
+//    public void saveStaff(Object object) {
+//        XMLDecoder decoder=null;
+//        XMLEncoder encoder=null;
+//
+//        try{
+//            encoder=new XMLEncoder(new BufferedOutputStream(new FileOutputStream("staff.xml")));
+//        }catch(FileNotFoundException fileNotFound){
+//            System.out.println("ERROR: While Creating or Opening the File staff.xml");
+//        }
+//        encoder.writeObject(object);
+//        //encoder.writeObject(cashier2);
+//        encoder.close();
+//    }
+//
+//    public ArrayList<Staff> getStaff() {
+//        //ArrayList<Cashier> cashiers = new ArrayList<>();
+//        ArrayList<Staff> staff = null;
+//        try{
+//            decoder=new XMLDecoder(new BufferedInputStream(new FileInputStream("staff.xml")));
+//
+//            do {
+//                staff = (ArrayList<Staff>) decoder.readObject();
+//                //cashiers.add(cashier);
+//            }
+//            while(null!=staff);
+//
+//
+//        }catch(FileNotFoundException fileNotFound){
+//            System.out.println("ERROR: While finding or Opening the File user.xml");
+//        }
+//        catch(ArrayIndexOutOfBoundsException ex){
+//            System.out.println("All added to the list");
+//        }
+//
+//
+//        finally {
+//            decoder.close();}
+//
+//
+//        return staff;
+//
+//
+//    }
+//
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -38,7 +38,7 @@
         <TextField fx:id="userId" layoutX="288.0" layoutY="156.0" prefHeight="28.0" prefWidth="250.0" />
         <TextField fx:id="userName" layoutX="288.0" layoutY="207.0" prefHeight="28.0" prefWidth="250.0" />
         <TextField fx:id="password" layoutX="288.0" layoutY="268.0" prefHeight="28.0" prefWidth="250.0" />
-        <Button fx:id="saveItem" layoutX="511.0" layoutY="392.0" mnemonicParsing="false" onAction="#saveItemOnAction" text="Delete">
+        <Button fx:id="saveItem" layoutX="505.0" layoutY="378.0" mnemonicParsing="false" onAction="#saveItemOnAction" text="Delete">
             <font>
                 <Font name="Comic Sans MS" size="15.0" />
             </font>

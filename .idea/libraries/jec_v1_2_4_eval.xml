@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jec-v1.2.4-eval">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/.idea/lib/jec-v1.2.4-eval.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.idea/lib/moyocore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.idea/lib/jec-samples.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

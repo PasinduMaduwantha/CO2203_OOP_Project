@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 
+import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
+
 
 public class Main extends Application {
 
@@ -18,6 +20,7 @@ public class Main extends Application {
             primaryStage.setScene(new Scene(root, 600, 400));
             primaryStage.setTitle("Welcome!");
             primaryStage.show();
+
         }
         catch (Exception e){
             System.out.println("Error! in Main.java");
@@ -29,5 +32,3 @@ public class Main extends Application {
         launch(args);
     }
 }
-
-//sss
