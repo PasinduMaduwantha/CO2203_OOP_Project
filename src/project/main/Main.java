@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
-
 
 public class Main extends Application {
 
@@ -17,7 +15,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         try{
             Parent root = FXMLLoader.load(getClass().getResource("../welcome_screen/welcome.fxml"));
-            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.setScene(new Scene(root, 700, 500));
             primaryStage.setTitle("Welcome!");
             primaryStage.show();
 

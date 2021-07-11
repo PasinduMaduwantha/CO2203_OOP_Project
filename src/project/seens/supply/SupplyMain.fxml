@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="510.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.frames.supply.SupplyMain">
+<AnchorPane prefHeight="510.0" prefWidth="600.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.frames.supply.SupplyMain">
    <children>
-      <Label layoutX="242.0" layoutY="7.0" prefHeight="58.0" prefWidth="116.0" text="Supply" textFill="#d90f21">
+      <Label layoutX="260.0" layoutY="-10.0" prefHeight="68.0" prefWidth="96.0" stylesheets="@../styles/Title.css" text="Supply" textFill="#d90f21">
          <font>
             <Font name="Comic Sans MS Bold Italic" size="30.0" />
          </font>
@@ -31,7 +31,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Button>
-      <TableView layoutX="42.0" layoutY="177.0" prefHeight="200.0" prefWidth="522.0">
+      <TableView layoutX="42.0" layoutY="177.0" prefHeight="200.0" prefWidth="522.0" stylesheets="@../styles/table.css">
         <columns>
           <TableColumn prefWidth="75.0" text="Supply ID" />
           <TableColumn prefWidth="75.0" text="Name of item" />
@@ -42,7 +42,7 @@
             <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Button fx:id="localSupply1" layoutX="66.0" layoutY="423.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="197.6" text="Clear Local Supply">
+      <Button fx:id="localSupply1" layoutX="70.0" layoutY="429.0" mnemonicParsing="false" onAction="#clearlocalSupplyOnAction" prefHeight="32.0" prefWidth="197.6" text="Clear Local Supply">
          <font>
             <Font name="Comic Sans MS" size="15.0" />
          </font>
@@ -50,7 +50,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Button>
-      <Button fx:id="internationalSupply1" layoutX="333.0" layoutY="429.0" mnemonicParsing="false" text="clear International Supply">
+      <Button fx:id="internationalSupply1" layoutX="333.0" layoutY="429.0" mnemonicParsing="false" onAction="#clearinternationalSupplyOnAction" text="clear International Supply">
          <font>
             <Font name="Comic Sans MS" size="15.0" />
          </font>
@@ -58,6 +58,5 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Button>
-      <Label layoutX="31.0" layoutY="396.0" prefHeight="18.0" prefWidth="554.0" text="Ohoma table dana eka set naththtna wenama button dekak local intenationla damu oyata lesi widihak" />
    </children>
 </AnchorPane>

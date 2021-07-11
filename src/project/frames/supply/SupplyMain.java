@@ -55,7 +55,7 @@ public class SupplyMain {
 
     public void localSupplyOnAction(ActionEvent actionEvent) {
         Stage stage=new Stage();
-        stage.setTitle("Store");
+        stage.setTitle("Local Supply");
         try {
             stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/project/seens/supply/SupplyLocal.fxml"))));
         } catch (Exception e) {
@@ -66,12 +66,20 @@ public class SupplyMain {
 
     public void internationalSupplyOnAction(ActionEvent actionEvent) {
         Stage stage=new Stage();
-        stage.setTitle("Store");
+        stage.setTitle("International Supply");
         try {
             stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/project/seens/supply/SupplyInternational.fxml"))));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
         stage.show();
+    }
+
+    public void clearinternationalSupplyOnAction(ActionEvent actionEvent) {
+        JOptionPane.showMessageDialog(null, "International Supply Deleted");
+    }
+
+    public void clearlocalSupplyOnAction(ActionEvent actionEvent) {
+        JOptionPane.showMessageDialog(null, "Local Supply Deleted");
     }
 }
